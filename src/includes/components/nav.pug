@@ -1,0 +1,15 @@
+include ../inline-svg/svg-logo
+
+mixin nav(links)
+  nav#main-nav.navbar.navbar-expand-md.menu
+    .container
+      a.navbar-brand(href="#home")
+        | Golden
+        +svg-logo
+      a.navbar-toggler.collapsed(data-target="#navbarCollapse" data-toggle="collapse").menu__btn
+        .menu__line
+      #navbarCollapse.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          for link in links
+            li.nav-item
+              a.nav-link(href=`#${link}`)=link

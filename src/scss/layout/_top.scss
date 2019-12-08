@@ -1,0 +1,16 @@
+.top {
+  height: 70rem;
+  background: linear-gradient(90deg, #000000 0%, #434343 100%), iurl('top.jpg');
+  background-blend-mode: soft-light;
+  background-position: 50% -5rem;
+  background-size: cover;
+  overflow: hidden;
+
+  @include respond-below(xl) {
+    background-position: center center;
+  }
+
+  @include respond-below(md) {
+    height: 50rem;
+  }
+}

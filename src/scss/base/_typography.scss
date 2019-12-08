@@ -2,11 +2,12 @@
 
 // Primary font - Roboto Slab
 // Secondary font - Open Sans
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:300,400&display=swap');
 
 // ---------------------------------------------------------
 
 body {
   font-family: $ff-primary;
   font-weight: $fw-regular;
+  font-weight: $fs-base;
 }

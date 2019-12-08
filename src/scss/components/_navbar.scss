@@ -1,0 +1,165 @@
+// Import BS4 navbar styles
+@import '~bootstrap/scss/navbar';
+
+// ----------------------------------------------
+.menu {
+  padding: 2rem 1rem;
+
+  .navbar-brand {
+    padding: 0;
+    font: 0/0 a;
+    transform: scale(1.3);
+
+    @include respond-below(md) {
+      transform: scale(1);
+    }
+
+    svg {
+      fill: $primary;
+    }
+  }
+
+  .nav-item {
+    padding: 0 1rem;
+
+    @include respond-between(md, lg) {
+      padding: 0 0.75rem;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  .nav-link {
+    display: block;
+    color: $white;
+    font-family: $ff-secondary;
+    font-weight: $fw-regular;
+    font-size: $fs-base;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    position: relative;
+    padding: 1rem 1.5rem !important;
+    @include trans(0.5, $props: color);
+
+    @include respond-between(md, lg) {
+      padding: 1rem !important;
+    }
+
+    @include respond-below(md) {
+      font-size: $fs-base-sm;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      @include size(100%, 3px);
+      background: $primary;
+      @include trans(0.5, $props: transform);
+    }
+
+    &::before {
+      @include absolute(top 0 left 0);
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+
+    &::after {
+      @include absolute(bottom 0 right 0);
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    &:hover {
+      color: $primary;
+
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      &::after {
+        transform: scaleX(1);
+        transform-origin: right;
+      }
+    }
+  }
+
+  .navbar-collapse {
+    text-align: center;
+
+    @include respond-below(md) {
+      background: rgba($color: $dark, $alpha: 0.65);
+    }
+
+    .navbar-nav {
+      padding: $space-sm 0;
+    }
+
+    .nav-item:not(:last-child) {
+      margin-bottom: $space-sm;
+    }
+
+    .nav-link {
+      display: inline-block;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    display: flex;
+    @include center;
+    @include size(5rem);
+    cursor: pointer;
+    @include trans(0.5, $easing: ease-in-out);
+    padding: 0;
+
+    .menu__line {
+      @include size(4rem, 4px);
+      background: $white;
+      @include brr(5px);
+      @include trans(0.5, $easing: ease-in-out);
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        @include size(4rem, 4px);
+        @include brr(5px);
+        background: $white;
+        position: absolute;
+        @include trans(0.5, $easing: ease-in-out);
+      }
+
+      &::before {
+        transform: translateY(-12px);
+      }
+
+      &::after {
+        transform: translateY(12px);
+      }
+    }
+
+    &--open {
+      .menu__line {
+        transform: translateX(5rem);
+        background: transparent;
+
+        &::before,
+        &::after {
+          background: $primary;
+        }
+
+        &::before {
+          transform: rotate(45deg) translate(-3.5rem, 3.5rem);
+        }
+
+        &::after {
+          transform: rotate(-45deg) translate(-3.5rem, -3.5rem);
+        }
+      }
+    }
+  }
+}

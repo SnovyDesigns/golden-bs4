@@ -14,7 +14,7 @@ $white: #ffffff;
 
 // ***** FONT FAMILIES *****
 $ff-primary: 'Roboto Slab', serif;
-$ff-secondary: 'Open Sans', sans-serif;
+$ff-secondary: 'Lato', sans-serif;
 
 // ----------------------------------------------
 
@@ -26,5 +26,10 @@ $fw-bold: 700;
 // ----------------------------------------------
 
 // ***** FONT SIZES *****
-$fs-paragraph: 1.5rem;
-$fs-paragraph-sm: 1.7rem;
+$fs-base: 1.5rem;
+$fs-base-sm: 1.7rem;
+
+// ----------------------------------------------
+
+// ***** MEASURES *****
+$space-sm: 2rem;

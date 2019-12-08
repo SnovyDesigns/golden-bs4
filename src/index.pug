@@ -1,3 +1,13 @@
+//- PUG includes
+include ./includes/main
+
+//- -----------------------------------
+
+//- Page data
+- const pageData = require("./js/data/pageData.js");
+
+//- -----------------------------------
+
 doctype html
 html(lang="en")
   head
@@ -7,3 +17,11 @@ html(lang="en")
     title Golden
     meta(name="description" content="Responsive template focused on businesses and technology. Ideal website for a small company")
   body
+    header#home.top
+      +nav(pageData.nav)
+      .container.h-100            
+        .row.h-100
+          .col.align-self-center.text-center
+            p.big-text=pageData.top.bigText
+            h1.heading-primary=pageData.top.headingPrimary
+            button.btn(type='button')=pageData.top.button
