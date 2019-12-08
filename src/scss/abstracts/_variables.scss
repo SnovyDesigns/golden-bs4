@@ -1,15 +1,30 @@
 // ***** COLORS *****
+$primary: #fed136;
+$primary-light: #ffd94f;
+$primary-dark: #b39014;
+
+$secondary: #f9f9f9;
+$light: #f7f7f7;
+$dark: #222222;
+$base: #777777;
+
+$white: #ffffff;
+
+// ----------------------------------------------
+
+// ***** FONT FAMILIES *****
+$ff-primary: 'Roboto Slab', serif;
+$ff-secondary: 'Open Sans', sans-serif;
 
 // ----------------------------------------------
 
 // ***** FONT WEIGHTS *****
-$font-weight-thin: 100;
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-bold: 700;
-$font-weight-black: 900;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
 
 // ----------------------------------------------
 
 // ***** FONT SIZES *****
-$font-size-base: 1.6rem;
+$fs-paragraph: 1.5rem;
+$fs-paragraph-sm: 1.7rem;

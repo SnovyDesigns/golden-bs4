@@ -4,14 +4,10 @@
 
 // A map of breakpoints - for media-queries 1em = 16px - it always comes from browser styles
 $breakpoints: (
-  // ~ 600px
-    sm: 37.5em,
-  // ~ 900px
-    md: 56.25em,
-  // ~ 1200px
-    lg: 75em,
-  // ~ 1800px
-    xl: 112.5em
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 );
 
 //
