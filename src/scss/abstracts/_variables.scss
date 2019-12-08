@@ -5,7 +5,13 @@ $primary-dark: #b39014;
 
 $secondary: #f9f9f9;
 $light: #f7f7f7;
+
 $dark: #222222;
+$dark-65: rgba(
+  $color: $dark,
+  $alpha: 0.65
+);
+
 $base: #777777;
 
 $white: #ffffff;
@@ -13,14 +19,14 @@ $white: #ffffff;
 // ----------------------------------------------
 
 // ***** FONT FAMILIES *****
-$ff-primary: 'Roboto Slab', serif;
+$ff-primary: 'Cormorant Garamond', serif;
 $ff-secondary: 'Lato', sans-serif;
 
 // ----------------------------------------------
 
 // ***** FONT WEIGHTS *****
-$fw-light: 300;
 $fw-regular: 400;
+$fw-semibold: 600;
 $fw-bold: 700;
 
 // ----------------------------------------------
@@ -29,7 +35,15 @@ $fw-bold: 700;
 $fs-base: 1.5rem;
 $fs-base-sm: 1.7rem;
 
+$fs-bigtext: 4.4rem;
+$fs-bigtext-sm: 3rem;
+
+$fs-h-primary: 7.5rem;
+$fs-h-primary-sm: 4.5rem;
+
 // ----------------------------------------------
 
 // ***** MEASURES *****
+$page-max-width: 192rem;
+
 $space-sm: 2rem;

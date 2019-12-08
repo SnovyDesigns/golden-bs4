@@ -17,11 +17,12 @@ html(lang="en")
     title Golden
     meta(name="description" content="Responsive template focused on businesses and technology. Ideal website for a small company")
   body
-    header#home.top
-      +nav(pageData.nav)
-      .container.h-100            
-        .row.h-100
-          .col.align-self-center.text-center
-            p.big-text=pageData.top.bigText
-            h1.heading-primary=pageData.top.headingPrimary
-            button.btn(type='button')=pageData.top.button
+    .wrapper
+      header#home.top
+        +nav(pageData.nav)
+        .container.top__container.u-text-white          
+          .row.h-100
+            .col.align-self-center.text-center
+              p.bigtext.top__bigtext=pageData.top.bigText
+              h1.heading-primary.top__heading=pageData.top.headingPrimary
+              button(type='button').btn.top__btn=pageData.top.button

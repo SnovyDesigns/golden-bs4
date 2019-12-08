@@ -13,4 +13,16 @@
   @include respond-below(md) {
     height: 50rem;
   }
+
+  &__container {
+    height: calc(100% - 8rem);
+  }
+
+  &__bigtext {
+    margin-bottom: 5rem;
+  }
+
+  &__heading {
+    margin-bottom: 6rem;
+  }
 }

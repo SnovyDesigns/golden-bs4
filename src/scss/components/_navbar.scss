@@ -3,7 +3,11 @@
 
 // ----------------------------------------------
 .menu {
-  padding: 2rem 1rem;
+  padding: 2rem 0;
+
+  @include respond-below(md) {
+    padding: 2rem 1.5rem;
+  }
 
   .navbar-brand {
     padding: 0;
@@ -91,19 +95,19 @@
     text-align: center;
 
     @include respond-below(md) {
-      background: rgba($color: $dark, $alpha: 0.65);
-    }
+      background: $dark-65;
 
-    .navbar-nav {
-      padding: $space-sm 0;
-    }
+      .navbar-nav {
+        padding: $space-sm 0;
+      }
 
-    .nav-item:not(:last-child) {
-      margin-bottom: $space-sm;
-    }
+      .nav-item:not(:last-child) {
+        margin-bottom: $space-sm;
+      }
 
-    .nav-link {
-      display: inline-block;
+      .nav-link {
+        display: inline-block;
+      }
     }
   }
 
@@ -111,7 +115,7 @@
     position: relative;
     display: flex;
     @include center;
-    @include size(5rem);
+    @include size(4rem);
     cursor: pointer;
     @include trans(0.5, $easing: ease-in-out);
     padding: 0;

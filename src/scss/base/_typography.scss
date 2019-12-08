@@ -2,7 +2,7 @@
 
 // Primary font - Roboto Slab
 // Secondary font - Open Sans
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Cormorant+Garamond:400,700i&display=swap');
 
 // ---------------------------------------------------------
 
@@ -10,4 +10,28 @@ body {
   font-family: $ff-primary;
   font-weight: $fw-regular;
   font-weight: $fs-base;
+}
+
+.bigtext {
+  font-weight: $fw-bold;
+  font-size: $fs-bigtext;
+  font-style: italic;
+  letter-spacing: 1.2px;
+
+  @include respond-below(md) {
+    font-size: $fs-bigtext-sm;
+  }
+}
+
+.heading-primary {
+  font-weight: $fw-bold;
+  font-size: $fs-h-primary;
+  font-family: $ff-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  line-height: 1;
+
+  @include respond-below(md) {
+    font-size: $fs-h-primary-sm;
+  }
 }
