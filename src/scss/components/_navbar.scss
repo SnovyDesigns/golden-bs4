@@ -40,9 +40,9 @@
     color: $white;
     font-family: $ff-secondary;
     font-weight: $fw-regular;
-    font-size: $fs-base;
+    font-size: $fs-link;
     text-transform: uppercase;
-    letter-spacing: 0.35px;
+    letter-spacing: 0.45px;
     position: relative;
     padding: 1rem 1.5rem !important;
     @include trans(0.5, $props: color);
@@ -52,7 +52,7 @@
     }
 
     @include respond-below(md) {
-      font-size: $fs-base-sm;
+      font-size: $fs-link-sm;
     }
 
     &::before,
@@ -60,7 +60,6 @@
       content: '';
       display: block;
       @include size(100%, 3px);
-      background: $primary;
       @include trans(0.5, $props: transform);
     }
 
@@ -68,12 +67,22 @@
       @include absolute(top 0 left 0);
       transform: scaleX(0);
       transform-origin: right;
+      background: linear-gradient(
+        to right,
+        rgba($color: $primary, $alpha: 0.1),
+        rgba($color: $primary, $alpha: 1)
+      );
     }
 
     &::after {
       @include absolute(bottom 0 right 0);
       transform: scaleX(0);
       transform-origin: left;
+      background: linear-gradient(
+        to left,
+        rgba($color: $primary, $alpha: 0.1),
+        rgba($color: $primary, $alpha: 1)
+      );
     }
 
     &:hover {

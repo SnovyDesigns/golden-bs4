@@ -1,0 +1,115 @@
+.btn {
+  font-family: $ff-secondary;
+  padding: 2rem 6rem;
+  font-size: $fs-link;
+  text-transform: uppercase;
+  font-weight: $fw-bold;
+  letter-spacing: 0.45px;
+  cursor: pointer;
+  position: relative;
+  @include trans(0.5);
+  box-shadow: 5px 5px 10px rgba($color: $dark, $alpha: 0.8);
+  border: 0;
+  overflow: hidden;
+
+  &__text {
+    position: relative;
+    z-index: 2;
+  }
+
+  span {
+    z-index: 2;
+  }
+
+  span:nth-child(1),
+  span:nth-child(3) {
+    @include size(100%, 3px);
+  }
+
+  span:nth-child(2),
+  span:nth-child(4) {
+    @include size(3px, 100%);
+  }
+
+  span:nth-child(1),
+  span:nth-child(4) {
+    @include absolute(top 0 left 0);
+  }
+
+  span:nth-child(1) {
+    animation: animate1 2s linear infinite;
+  }
+
+  span:nth-child(2) {
+    @include absolute(top 0 right 0);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+  }
+
+  span:nth-child(3) {
+    @include absolute(bottom 0 left 0);
+    animation: animate3 2s linear infinite;
+  }
+
+  span:nth-child(4) {
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+  }
+
+  &--primary {
+    background: rgba($color: $dark, $alpha: 0.5);
+    color: darken($primary, 20%);
+
+    &::before {
+      content: '';
+      display: block;
+      @include size(50%, 100%);
+      @include absolute(top 0 left 0);
+      background: rgba($color: $dark, $alpha: 0.6);
+      z-index: 1;
+      @include trans(0.5);
+    }
+
+    span:nth-child(1) {
+      background: linear-gradient(
+        to right,
+        rgba($color: $primary, $alpha: 0.1),
+        rgba($color: $primary, $alpha: 1)
+      );
+    }
+
+    span:nth-child(2) {
+      background: linear-gradient(
+        to bottom,
+        rgba($color: $primary, $alpha: 0.1),
+        rgba($color: $primary, $alpha: 1)
+      );
+    }
+
+    span:nth-child(3) {
+      background: linear-gradient(
+        to left,
+        rgba($color: $primary, $alpha: 0.1),
+        rgba($color: $primary, $alpha: 1)
+      );
+    }
+
+    span:nth-child(4) {
+      background: linear-gradient(
+        to top,
+        rgba($color: $primary, $alpha: 0.1),
+        rgba($color: $primary, $alpha: 1)
+      );
+    }
+  }
+
+  &:hover {
+    background: rgba($color: $dark, $alpha: 0.9);
+    color: $primary;
+
+    &::before {
+      background: rgba($color: $dark, $alpha: 1);
+    }
+  }
+}

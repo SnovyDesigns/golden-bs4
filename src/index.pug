@@ -25,4 +25,4 @@ html(lang="en")
             .col.align-self-center.text-center
               p.bigtext.top__bigtext=pageData.top.bigText
               h1.heading-primary.top__heading=pageData.top.headingPrimary
-              button(type='button').btn.top__btn=pageData.top.button
+              +btn(pageData.top.button, 'btn--primary top__btn')
