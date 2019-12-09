@@ -1,0 +1,9 @@
+.homepage {
+  section {
+    padding: $space-xxl 0;
+
+    @include respond-below(md) {
+      padding: $space-lg 0;
+    }
+  }
+}

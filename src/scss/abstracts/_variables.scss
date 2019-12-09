@@ -26,14 +26,14 @@ $ff-secondary: 'Lato', sans-serif;
 
 // ***** FONT WEIGHTS *****
 $fw-regular: 400;
-$fw-semibold: 600;
+$fw-medium: 600;
 $fw-bold: 700;
 
 // ----------------------------------------------
 
 // ***** FONT SIZES *****
-$fs-base: 1.5rem;
-$fs-base-sm: 1.7rem;
+$fs-base: 1.7rem;
+$fs-base-sm: 1.8rem;
 
 $fs-link: 1.6rem;
 $fs-link-sm: 1.8rem;
@@ -44,9 +44,21 @@ $fs-bigtext-sm: 3rem;
 $fs-h-primary: 7.5rem;
 $fs-h-primary-sm: 4.5rem;
 
+$fs-h-secondary: 4rem;
+$fs-h-secondary-sm: 3rem;
+
+$fs-h-tertiary: 1.8rem;
+$fs-h-tertiary-sm: 1.6rem;
+
+$fs-prime: 2rem;
+
 // ----------------------------------------------
 
 // ***** MEASURES *****
 $page-max-width: 192rem;
 
 $space-sm: 2rem;
+$space-md: 3rem;
+$space-lg: 6rem;
+$space-xl: 8rem;
+$space-xxl: 12rem;

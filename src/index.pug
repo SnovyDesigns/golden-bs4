@@ -16,7 +16,7 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Golden
     meta(name="description" content="Responsive template focused on businesses and technology. Ideal website for a small company")
-  body
+  body.homepage
     .wrapper
       header#home.top
         +nav(pageData.nav)
@@ -26,3 +26,15 @@ html(lang="en")
               p.bigtext.top__bigtext=pageData.top.bigText
               h1.heading-primary.top__heading=pageData.top.headingPrimary
               +btn(pageData.top.button, 'btn--primary top__btn')
+      main
+        section#services.services
+          .container.text-center
+            h2.heading-secondary.services__mainheading=pageData.services.headingSecondary
+            p.prime.services__prime=pageData.services.prime
+            .row.services__row
+              for feature, index in pageData.services.features
+                .col-4
+                  .d-flex.justify-content-center.align-items-center.mx-auto.services__icon
+                    +svg-services-icons(index+1)
+                  h3.heading-tertiary.services__subheading=feature
+                  p.d-none.d-md-block Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.

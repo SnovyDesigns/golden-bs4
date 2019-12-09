@@ -1,0 +1,27 @@
+.services {
+  background: $white;
+
+  &__row {
+    align-items: baseline;
+  }
+
+  &__icon {
+    margin-bottom: $space-md;
+
+    @include respond-below(md) {
+      margin-bottom: 1rem;
+    }
+
+    path {
+      stroke: $primary;
+    }
+  }
+
+  &__subheading {
+    margin-bottom: $space-sm;
+  }
+
+  p {
+    padding: 0 1rem;
+  }
+}

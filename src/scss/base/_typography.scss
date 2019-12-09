@@ -2,14 +2,19 @@
 
 // Primary font - Cormorant Garamond
 // Secondary font - Lato
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Cormorant+Garamond:400,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Cormorant+Garamond:400,400i,700i&display=swap');
 
 // ---------------------------------------------------------
 
 body {
   font-family: $ff-primary;
   font-weight: $fw-regular;
-  font-weight: $fs-base;
+  font-size: $fs-base;
+  letter-spacing: 0.1px;
+
+  @include respond-below(md) {
+    font-size: $fs-base-sm;
+  }
 }
 
 .bigtext {
@@ -23,15 +28,55 @@ body {
   }
 }
 
-.heading-primary {
+%heading {
   font-weight: $fw-bold;
-  font-size: $fs-h-primary;
   font-family: $ff-secondary;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
   line-height: 1;
+}
+
+.heading-primary,
+.heading-secondary {
+  text-transform: uppercase;
+}
+
+.heading-primary {
+  @extend %heading;
+  font-size: $fs-h-primary;
+  letter-spacing: 0.75px;
 
   @include respond-below(md) {
     font-size: $fs-h-primary-sm;
+  }
+}
+
+.heading-secondary {
+  @extend %heading;
+  font-size: $fs-h-secondary;
+  letter-spacing: -0.25px;
+  margin-bottom: $space-sm;
+
+  @include respond-below(md) {
+    font-size: $fs-h-secondary-sm;
+  }
+}
+
+.heading-tertiary {
+  @extend %heading;
+  font-size: $fs-h-tertiary;
+  line-height: 1.4;
+
+  @include respond-below(md) {
+    font-size: $fs-h-tertiary-sm;
+  }
+}
+
+.prime {
+  font-size: $fs-prime;
+  font-style: italic;
+  color: $base;
+  margin-bottom: $space-xl;
+
+  @include respond-below(md) {
+    margin-bottom: $space-lg;
   }
 }
