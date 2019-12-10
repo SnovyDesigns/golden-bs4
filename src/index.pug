@@ -43,6 +43,7 @@ html(lang="en")
           .container.text-center
             h2.heading-secondary.portfolio__mainheading=pageData.portfolio.headingSecondary
             p.prime.portfolio__prime=pageData.portfolio.prime
-            .row.portfolio__row
-              for item, index in pageData.portfolio.items
-                +card(item, index)
+            .swiper-container
+              .swiper-wrapper
+                for item, index in pageData.portfolio.items
+                  +card(item, index, 'swiper-slide')
