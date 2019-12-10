@@ -1,0 +1,6 @@
+mixin btn--primary(text, mclass)
+  button(class=`${mclass}`, type='button').btn.btn--primary
+    - let n = 1;
+    while n <= 4
+      span(class=`btn__line--${n++}`).btn__line
+    .btn__text #{text}

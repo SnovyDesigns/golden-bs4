@@ -6,4 +6,12 @@
       padding: $space-lg 0;
     }
   }
+
+  .heading-secondary + .prime {
+    margin-bottom: $space-xl;
+
+    @include respond-below(md) {
+      margin-bottom: $space-lg;
+    }
+  }
 }

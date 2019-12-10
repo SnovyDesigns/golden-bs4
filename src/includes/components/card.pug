@@ -1,0 +1,9 @@
+include ./btn--outline
+
+mixin card(item, index)
+  .card
+    img(src=require(`./img/portfolio${index+1}.jpg`)).card-img-top.img-fluid
+    .card-body
+      h3.card-title.heading-tertiary=item.title
+      p.card-text.prime=item.prime
+      +btn--outline('Show me more')

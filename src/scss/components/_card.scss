@@ -1,0 +1,17 @@
+// Import BS4 card styles
+@import '~bootstrap/scss/card';
+
+// ----------------------------------------------
+.card {
+  &-body {
+    padding-bottom: $space-md;
+  }
+
+  &-title {
+    margin-top: $space-sm;
+  }
+
+  &-text {
+    margin-bottom: $space-md;
+  }
+}

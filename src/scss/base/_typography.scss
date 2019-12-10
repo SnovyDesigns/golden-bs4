@@ -74,9 +74,4 @@ body {
   font-size: $fs-prime;
   font-style: italic;
   color: $base;
-  margin-bottom: $space-xl;
-
-  @include respond-below(md) {
-    margin-bottom: $space-lg;
-  }
 }
