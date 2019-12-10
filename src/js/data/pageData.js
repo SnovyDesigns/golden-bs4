@@ -8,6 +8,6 @@ module.exports = {
   services: {
     headingSecondary: 'Services',
     prime: 'Proin iaculis purus consequat sem cure.',
-    features: ['E-Commerce', 'Web Security', 'Responsive Web']
+    features: ['Responsive Web', 'Web Security', 'E-Commerce']
   }
 };

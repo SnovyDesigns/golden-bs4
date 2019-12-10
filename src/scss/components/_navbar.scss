@@ -61,28 +61,19 @@
       display: block;
       @include size(100%, 3px);
       @include trans(0.5, $props: transform);
+      background: $primary;
     }
 
     &::before {
       @include absolute(top 0 left 0);
       transform: scaleX(0);
       transform-origin: right;
-      background: linear-gradient(
-        to right,
-        rgba($color: $primary, $alpha: 0.1),
-        rgba($color: $primary, $alpha: 1)
-      );
     }
 
     &::after {
       @include absolute(bottom 0 right 0);
       transform: scaleX(0);
       transform-origin: left;
-      background: linear-gradient(
-        to left,
-        rgba($color: $primary, $alpha: 0.1),
-        rgba($color: $primary, $alpha: 1)
-      );
     }
 
     &:hover {
