@@ -1,0 +1,9 @@
+mixin media(item, index)
+  .media.align-items-center
+    img(src=require(`./img/about${index+1}.jpg`)).img-fluid.media__img
+    //- img.align-self-center.mr-3(src='...', alt='...')
+    .media-body.media__body
+      h3.heading-tertiary.media__date=item.date
+      h3.heading-tertiary.media__title=item.title
+      p Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.
+

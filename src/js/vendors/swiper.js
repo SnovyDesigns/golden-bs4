@@ -2,9 +2,10 @@ import Swiper from 'swiper';
 
 const mySwiper = new Swiper('.swiper-container', {
   effect: 'coverflow',
-  spaceBetween: 25,
+  // spaceBetween: 25,
   grabCursor: true,
   centeredSlides: true,
+  loop: true,
   slidesPerView: 'auto',
   coverflowEffect: {
     rotate: 50,
@@ -15,4 +16,4 @@ const mySwiper = new Swiper('.swiper-container', {
   }
 });
 
-mySwiper.slideNext();
+mySwiper.slideToLoop();

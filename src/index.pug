@@ -27,7 +27,7 @@ html(lang="en")
               h1.heading-primary.top__heading=pageData.top.headingPrimary
               +btn--primary(pageData.top.button, 'top__btn')
       main
-        section#services.services
+        section#services.services.bg-white
           .container.text-center
             h2.heading-secondary.services__mainheading=pageData.services.headingSecondary
             p.prime.services__prime=pageData.services.prime
@@ -47,3 +47,11 @@ html(lang="en")
               .swiper-wrapper
                 for item, index in pageData.portfolio.items
                   +card(item, index, 'swiper-slide')
+
+        section#about.about.bg-white
+          .container.text-center
+            h2.heading-secondary.about__mainheading=pageData.about.headingSecondary
+            p.prime.about__prime=pageData.about.prime
+            .row
+              for item, index in pageData.about.items
+                +media(item, index)

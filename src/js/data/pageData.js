@@ -11,7 +11,7 @@ module.exports = {
     features: ['Responsive Web', 'Web Security', 'E-Commerce']
   },
   portfolio: {
-    headingSecondary: 'Portfolio',
+    headingSecondary: 'Our portfolio',
     prime: 'Proin iaculis purus consequat sem cure.',
     items: [
       { title: 'Ebony & Ivory', prime: 'Branding' },
@@ -21,5 +21,17 @@ module.exports = {
       { title: 'Treehouse Template', prime: 'Web Design' },
       { title: 'Burned Logo', prime: 'Branding' }
     ]
+  },
+  about: {
+    headingSecondary: 'About us',
+    prime: 'Proin iaculis purus consequat sem cure.',
+    items: [
+      { date: 'July 2010', title: 'Our Humble Beginnings' },
+      { date: 'January 2011', title: 'Facing Startup Battles' },
+      { date: 'December 2012', title: 'Enter The Dark Days' },
+      { date: 'February 2014', title: 'Our Triumph' },
+      { date: 'Now', title: "We're still fighting" }
+    ],
+    lastItem: 'Our story continues'
   }
 };
