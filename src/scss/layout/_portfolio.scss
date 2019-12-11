@@ -1,6 +1,6 @@
 .portfolio {
-  &__pagination {
-    bottom: -3rem !important;
-    z-index: 9;
+  &__caption {
+    color: $base;
+    margin-top: $space-md;
   }
 }

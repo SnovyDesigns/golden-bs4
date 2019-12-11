@@ -1,5 +1,5 @@
 module.exports = {
-  nav: ['home', 'services', 'portfolio', 'about', 'contact'],
+  nav: ['home', 'services', 'portfolio', 'about', 'team', 'contact'],
   top: {
     bigText: 'Welcome To Our Studio!',
     headingPrimary: 'It’s nice to Meet you',
@@ -33,5 +33,41 @@ module.exports = {
       { date: 'Now', title: "We're still fighting" }
     ],
     lastItem: 'Our story continues'
+  },
+  team: {
+    headingSecondary: 'Our amazing team',
+    prime: 'Proin iaculis purus consequat sem cure.',
+    workers: [
+      {
+        name: 'Jane Doe',
+        occupation: 'CEO',
+        social: ['facebook', 'twitter', 'instagram']
+      },
+      {
+        name: 'Rico Massimo',
+        occupation: 'Vice CEO',
+        social: ['facebook', 'twitter', 'linkedin']
+      },
+      {
+        name: 'Kimberly Thompson',
+        occupation: 'Marketer',
+        social: ['pinterest', 'twitter', 'instagram']
+      },
+      {
+        name: 'Uku Mason',
+        occupation: 'Graphic Designer',
+        social: ['behance', 'instagram', 'pinterest']
+      },
+      {
+        name: "Kellie O'Hara",
+        occupation: 'Product Division',
+        social: ['linkedin', 'twitter', 'facebook']
+      },
+      {
+        name: 'Eldridge McCullough',
+        occupation: 'Optimization Supervisor',
+        social: ['facebook', 'twitter', 'instagram']
+      }
+    ]
   }
 };

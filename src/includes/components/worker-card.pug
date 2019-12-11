@@ -1,0 +1,16 @@
+include ../inline-svg/svg-social-icons
+
+mixin worker-card(worker, index, mclass)
+  .worker-card(class=`${mclass}`)
+    .worker-card__img-box
+    .worker-card__content
+      h3.heading-tertiary.worker-card__name=worker.name
+      p.prime.worker-card__occupation=worker.occupation
+      ul.social
+        for brand in worker.social
+          li
+            a.social__link
+              +svg-social-icons(brand)
+              - let n = 1;
+              while n <= 4
+                span.social__line(class=`social__line--${n++}`)

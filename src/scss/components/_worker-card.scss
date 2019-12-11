@@ -1,0 +1,16 @@
+.worker-card {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  @include size(30rem, 40rem);
+  @include brr(0.25rem);
+  @include trans(0.5);
+
+  &__name {
+    margin-bottom: 1rem;
+  }
+
+  &__occupation {
+    margin-bottom: $space-md;
+  }
+}

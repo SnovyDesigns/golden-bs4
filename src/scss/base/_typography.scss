@@ -2,7 +2,7 @@
 
 // Primary font - Cormorant Garamond
 // Secondary font - Lato
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Cormorant+Garamond:400,400i,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Cormorant+Garamond:400,400i,700i&display=swap');
 
 // ---------------------------------------------------------
 
@@ -74,4 +74,10 @@ body {
   font-size: $fs-prime;
   font-style: italic;
   color: $base;
+}
+
+.caption {
+  font-family: $ff-secondary;
+  font-style: $fs-caption;
+  font-weight: $fw-light;
 }

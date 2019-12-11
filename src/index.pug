@@ -43,10 +43,11 @@ html(lang="en")
           .container.text-center
             h2.heading-secondary.portfolio__mainheading=pageData.portfolio.headingSecondary
             p.prime.portfolio__prime=pageData.portfolio.prime
-            .swiper-container
+            .swiper-container.portfolio__swiper
               .swiper-wrapper
                 for item, index in pageData.portfolio.items
                   +card(item, index, 'swiper-slide')
+            p.caption.portfolio__caption You can also use keyboard arrows to change slide
 
         section#about.about.bg-white
           .container.text-center
@@ -55,3 +56,16 @@ html(lang="en")
             .row
               for item, index in pageData.about.items
                 +media(item, index)
+
+        section#team.team.bg-light
+          .container.text-center
+            h2.heading-secondary.about__mainheading=pageData.team.headingSecondary
+            p.prime.team__prime=pageData.team.prime
+            .swiper-container.team__swiper
+              //- .swiper-wrapper.team__wrapper
+              .team__toggle
+                for worker, index in pageData.team.workers
+                  +worker-card(worker, index, 'swiper-slide')
+
+
+
