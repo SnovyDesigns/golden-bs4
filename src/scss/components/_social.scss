@@ -8,9 +8,10 @@
     @include size(5rem);
     display: flex;
     @include center;
+    cursor: pointer;
 
     svg {
-      height: 3rem;
+      height: 2rem;
       @include trans(0.5);
     }
   }

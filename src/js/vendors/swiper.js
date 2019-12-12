@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import Swiper from 'swiper';
 
-const portfolioSwiper = new Swiper('.portfolio__swiper', {
+const portfolioSwiper = new Swiper('.swiper-container', {
   effect: 'coverflow',
   // spaceBetween: 25,
   grabCursor: true,
@@ -20,18 +20,4 @@ const portfolioSwiper = new Swiper('.portfolio__swiper', {
   }
 });
 
-// Enable team swiper below desktop view
-
-let teamToggle = document.querySelector('.team__toggle');
-
-if (window.innerWidth >= 1200) {
-  teamToggle.classList.add('team__wrapper');
-} else {
-  teamToggle.classList.add('swiper-wrapper');
-}
-
-const teamSwiper = new Swiper('.team__swiper', {
-  slidesPerView: 'auto',
-  spaceBetween: 30,
-  centeredSlides: true
-});
+portfolioSwiper.slideToLoop();

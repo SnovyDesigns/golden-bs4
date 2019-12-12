@@ -3,6 +3,7 @@ include ../inline-svg/svg-social-icons
 mixin worker-card(worker, index, mclass)
   .worker-card(class=`${mclass}`)
     .worker-card__img-box
+      img(src=require(`./img/avatar${index+1}.jpg`))
     .worker-card__content
       h3.heading-tertiary.worker-card__name=worker.name
       p.prime.worker-card__occupation=worker.occupation

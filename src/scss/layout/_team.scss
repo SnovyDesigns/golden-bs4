@@ -2,13 +2,11 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 40rem;
     column-gap: 4rem;
     row-gap: $space-xl;
   }
 
   .social {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
   }
 }

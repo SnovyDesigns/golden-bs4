@@ -1,16 +1,66 @@
 .worker-card {
   position: relative;
-  background: #fff;
+  background: $dark;
   overflow: hidden;
   @include size(30rem, 40rem);
   @include brr(0.25rem);
   @include trans(0.5);
 
+  &__img-box {
+    @include absolute(top 0 left 0);
+    @include size(100%);
+    @include trans(0.5);
+  }
+
+  &__content {
+    @include absolute(bottom -100%);
+    @include size(30rem, 55%);
+    padding: 2rem;
+    background: linear-gradient(0deg, #000, transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include trans(0.5);
+    box-sizing: border-box;
+  }
+
   &__name {
     margin-bottom: 1rem;
+    color: $white;
   }
 
   &__occupation {
     margin-bottom: $space-md;
+    color: darken($color: $primary, $amount: 20%);
+  }
+
+  .social {
+    svg {
+      fill: rgba($color: $white, $alpha: 0.9);
+    }
+
+    &__line {
+      background: rgba($color: $white, $alpha: 0.9);
+    }
+
+    &__link:hover {
+      svg {
+        fill: $primary;
+      }
+
+      .social__line {
+        background: $primary;
+      }
+    }
+  }
+
+  &:hover {
+    .worker-card__img-box {
+      opacity: 0.5;
+    }
+
+    .worker-card__content {
+      bottom: 0;
+    }
   }
 }
