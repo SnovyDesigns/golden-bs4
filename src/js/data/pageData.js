@@ -97,5 +97,10 @@ module.exports = {
       message: 'Type your message here...',
       button: 'Send me'
     }
+  },
+  footer: {
+    layout: 'Layout by SYMU.co',
+    coding: 'Coding by SnovyDesigns',
+    social: ['facebook', 'twitter', 'instagram', 'dribble']
   }
 };

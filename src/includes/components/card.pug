@@ -1,8 +1,8 @@
 include ./btn--outline
 
 
-mixin card(item, index, mclass)
-  .card(class=`${mclass}`)
+mixin card(item, index, mClass)
+  .card(class=`${mClass}`)
     img(src=require(`./img/portfolio${index+1}.jpg`), alt='Portfolio item').card-img-top.img-fluid
     .card-body
       h3.card-title.heading-tertiary=item.title

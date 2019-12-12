@@ -12,7 +12,7 @@
 
     svg {
       height: 2rem;
-      @include trans(0.5);
+      @include trans;
     }
   }
 

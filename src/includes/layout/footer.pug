@@ -1,0 +1,8 @@
+include ../components/social
+
+mixin footer(data, mClass)
+  footer(class=`${mClass}`).footer
+    .container.footer__container
+      p.caption.footer__layout=data.layout
+      p.caption.footer__coding=data.coding
+      +social(data.social)

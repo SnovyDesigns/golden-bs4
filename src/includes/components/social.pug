@@ -1,0 +1,11 @@
+include ../inline-svg/svg-social-icons
+
+mixin social(brands)
+  ul.social
+    for brand in brands
+      li
+        a.social__link
+          +svg-social-icons(brand)
+          - let n = 1;
+          while n <= 4
+            span.social__line(class=`social__line--${n++}`)

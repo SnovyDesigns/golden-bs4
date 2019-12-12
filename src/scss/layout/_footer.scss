@@ -1,0 +1,44 @@
+.footer {
+  padding: $space-md 0;
+
+  &__container {
+    display: grid;
+    grid-template-areas: 'layout social coding';
+    height: 100%;
+    align-items: center;
+
+    @include respond-below(md) {
+      grid-template-areas:
+        'social'
+        'layout'
+        'coding';
+    }
+    row-gap: $space-md;
+    text-align: center;
+  }
+
+  &__layout {
+    grid-area: layout;
+  }
+
+  &__coding {
+    grid-area: coding;
+    text-align: right;
+
+    @include respond-below(md) {
+      text-align: center;
+    }
+  }
+
+  .social {
+    &__link:hover {
+      svg {
+        fill: darken($color: $primary, $amount: 20%);
+      }
+
+      .social__line {
+        background: darken($color: $primary, $amount: 20%);
+      }
+    }
+  }
+}
