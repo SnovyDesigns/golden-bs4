@@ -1,0 +1,103 @@
+.contact-form {
+  @include respond-below(md) {
+    width: 100%;
+    margin: 0;
+  }
+
+  &__wrapper {
+    padding: 0 $space-sm;
+    @include brr(0.125rem);
+    margin-bottom: $space-md;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $space-lg;
+
+    @include respond-below(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__textarea {
+    textarea {
+      @include size(100%);
+      padding: 1rem;
+      font-size: $fs-link;
+      color: $dark;
+      font-family: $ff-secondary;
+
+      @include respond-below(md) {
+        height: 15rem;
+      }
+    }
+  }
+
+  &__row {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+
+  &__col {
+    position: relative;
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+    @include trans(0.5);
+  }
+
+  &__input-box {
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    color: $white;
+    font-family: $ff-secondary;
+    font-weight: $fw-light;
+
+    input {
+      @include absolute(top 0 left 0);
+      @include size(100%);
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      font-size: $fs-link;
+      padding: 0 1rem;
+      z-index: 1;
+      color: $dark;
+      font-family: $ff-secondary;
+    }
+
+    .text {
+      @include absolute(top 0 left 0);
+      line-height: 4rem;
+      padding: 0 1rem;
+      display: block;
+      @include trans(0.5);
+      pointer-events: none;
+    }
+
+    .line {
+      @include absolute(bottom 0);
+      display: block;
+      @include size(100%, 3px);
+      background: $white;
+      @include trans(0.5);
+      @include brr(0.125rem);
+      pointer-events: none;
+    }
+
+    input:focus,
+    input:valid {
+      + .text {
+        top: -3.5rem;
+        left: -1rem;
+        color: $primary;
+      }
+
+      ~ .line {
+        height: 100%;
+      }
+    }
+  }
+}

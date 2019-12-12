@@ -1,35 +1,35 @@
 @keyframes animate1 {
-  0% {
+  from {
     transform: translateX(-100%);
   }
-  100% {
+  to {
     transform: translateX(100%);
   }
 }
 
 @keyframes animate2 {
-  0% {
+  from {
     transform: translateY(-100%);
   }
-  100% {
+  to {
     transform: translateY(100%);
   }
 }
 
 @keyframes animate3 {
-  0% {
+  from {
     transform: translateX(100%);
   }
-  100% {
+  to {
     transform: translateX(-100%);
   }
 }
 
 @keyframes animate4 {
-  0% {
+  from {
     transform: translateY(100%);
   }
-  100% {
+  to {
     transform: translateY(-100%);
   }
 }

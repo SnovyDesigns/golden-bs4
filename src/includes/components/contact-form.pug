@@ -1,3 +1,19 @@
 include ../components/btn--primary
 
-mixin contact-form
+mixin contact-form(formData)
+  form.contact-form
+    .contact-form__wrapper
+      .contact-form__inputs
+        for data in formData.inputs
+          .contact-form__col
+            .contact-form__input-box
+              if data.required
+                input(name="", type=`${data.type !== undefined ? data.type : 'text'}`, required)
+              else
+                input(name="", type=`${data.type}`)
+              span.text=data.text
+              span.line
+      .contact-form__textarea
+        textarea(required="required", placeholder=`${formData.message}`) 
+           
+    +btn--primary(formData.button, 'contact-form__btn')

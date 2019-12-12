@@ -72,6 +72,30 @@ module.exports = {
   },
   contact: {
     headingSecondary: 'Contact Us',
-    prime: 'Proin iaculis purus consequat sem cure.'
+    prime: 'Proin iaculis purus consequat sem cure.',
+    form: {
+      inputs: [
+        {
+          text: 'First name',
+          required: true
+        },
+        {
+          text: 'Last name',
+          required: true
+        },
+        {
+          type: 'email',
+          text: 'Email',
+          required: true
+        },
+        {
+          type: 'tel',
+          text: 'Mobile',
+          required: true
+        }
+      ],
+      message: 'Type your message here...',
+      button: 'Send me'
+    }
   }
 };
