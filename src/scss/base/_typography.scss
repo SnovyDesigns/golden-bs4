@@ -73,7 +73,7 @@ body {
 .prime {
   font-size: $fs-prime;
   font-style: italic;
-  color: $base;
+  color: darken($color: $primary, $amount: 20%);
 }
 
 .caption {

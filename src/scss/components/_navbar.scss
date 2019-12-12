@@ -20,7 +20,14 @@
     }
 
     svg {
-      fill: $primary;
+      fill: darken($color: $primary, $amount: 20%);
+      @include trans(0.5);
+    }
+
+    &:hover {
+      svg {
+        fill: $primary;
+      }
     }
   }
 

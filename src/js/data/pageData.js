@@ -69,5 +69,9 @@ module.exports = {
         social: ['facebook', 'twitter', 'instagram']
       }
     ]
+  },
+  contact: {
+    headingSecondary: 'Contact Us',
+    prime: 'Proin iaculis purus consequat sem cure.'
   }
 };

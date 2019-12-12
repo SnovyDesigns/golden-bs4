@@ -1,0 +1,12 @@
+include ../components/nav
+include ../components/btn--primary
+
+mixin header(data, mId, mClass)
+  header(class=`${mClass}`, id=`${mId}`)
+    +nav(data.nav)
+    .container.top__container.u-text-white          
+      .row.h-100
+        .col.align-self-center.text-center
+          p.bigtext.top__bigtext=data.top.bigText
+          h1.heading-primary.top__heading=data.top.headingPrimary
+          +btn--primary(data.top.button, 'top__btn')

@@ -18,19 +18,13 @@ html(lang="en")
     meta(name="description" content="Responsive template focused on businesses and technology. Ideal website for a small company")
   body.homepage
     .wrapper
-      header#home.top
-        +nav(pageData.nav)
-        .container.top__container.u-text-white          
-          .row.h-100
-            .col.align-self-center.text-center
-              p.bigtext.top__bigtext=pageData.top.bigText
-              h1.heading-primary.top__heading=pageData.top.headingPrimary
-              +btn--primary(pageData.top.button, 'top__btn')
+      +header(pageData, 'home', 'top')
+      
       main
         section#services.services.bg-white
           .container.text-center
-            h2.heading-secondary.services__mainheading=pageData.services.headingSecondary
-            p.prime.services__prime=pageData.services.prime
+            h2.heading-secondary=pageData.services.headingSecondary
+            p.prime=pageData.services.prime
             .row.services__row
               for feature, index in pageData.services.features
                 .col-4
@@ -41,8 +35,8 @@ html(lang="en")
 
         section#portfolio.portfolio.bg-light
           .container.text-center
-            h2.heading-secondary.portfolio__mainheading=pageData.portfolio.headingSecondary
-            p.prime.portfolio__prime=pageData.portfolio.prime
+            h2.heading-secondary=pageData.portfolio.headingSecondary
+            p.prime=pageData.portfolio.prime
             .swiper-container.portfolio__swiper
               .swiper-wrapper
                 for item, index in pageData.portfolio.items
@@ -51,16 +45,16 @@ html(lang="en")
 
         section#about.about.bg-white
           .container.text-center
-            h2.heading-secondary.about__mainheading=pageData.about.headingSecondary
-            p.prime.about__prime=pageData.about.prime
+            h2.heading-secondary=pageData.about.headingSecondary
+            p.prime=pageData.about.prime
             .row
               for item, index in pageData.about.items
                 +media(item, index)
 
         section#team.team.bg-light
           .container.text-center
-            h2.heading-secondary.about__mainheading=pageData.team.headingSecondary
-            p.prime.team__prime=pageData.team.prime
+            h2.heading-secondary=pageData.team.headingSecondary
+            p.prime=pageData.team.prime
             .swiper-container.team__swiper
               .swiper-toggle
                 for worker, index in pageData.team.workers
@@ -68,6 +62,10 @@ html(lang="en")
                     +worker-card(worker, index)
             p.d-block.d-md-none.caption.team__caption Swipe left/right to see all our staff
 
+        section#contact.contact
+          .container.text-center
+            h2.heading-secondary.u-text-white=pageData.contact.headingSecondary
+            p.prime.u-text-primary-dark=pageData.contact.prime
 
 
 

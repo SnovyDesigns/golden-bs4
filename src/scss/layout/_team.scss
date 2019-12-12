@@ -22,5 +22,6 @@
 
   &__caption {
     margin-top: $space-md;
+    color: darken($color: $primary, $amount: 20%);
   }
 }

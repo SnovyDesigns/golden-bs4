@@ -1,6 +1,6 @@
 .portfolio {
   &__caption {
-    color: $base;
+    color: darken($color: $primary, $amount: 20%);
     margin-top: $space-md;
   }
 }
