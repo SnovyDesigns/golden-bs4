@@ -61,9 +61,13 @@ html(lang="en")
           .container.text-center
             h2.heading-secondary.about__mainheading=pageData.team.headingSecondary
             p.prime.team__prime=pageData.team.prime
-            .team__wrapper
-              for worker, index in pageData.team.workers
-                +worker-card(worker, index)
+            .swiper-container.team__swiper
+              .swiper-toggle
+                for worker, index in pageData.team.workers
+                  .swiper-slide.team__slide
+                    +worker-card(worker, index)
+            p.d-block.d-md-none.caption.team__caption Swipe left/right to see all our staff
+
 
 
 

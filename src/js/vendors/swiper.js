@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import Swiper from 'swiper';
 
-const portfolioSwiper = new Swiper('.swiper-container', {
+const portfolioSwiper = new Swiper('.portfolio__swiper', {
   effect: 'coverflow',
   // spaceBetween: 25,
   grabCursor: true,
@@ -20,4 +20,14 @@ const portfolioSwiper = new Swiper('.swiper-container', {
   }
 });
 
-portfolioSwiper.slideToLoop();
+const swiperToggle = document.querySelector('.swiper-toggle');
+
+if (window.innerWidth < 768) {
+  swiperToggle.classList.add('swiper-wrapper');
+  var swiper = new Swiper('.team__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30
+  });
+} else {
+  swiperToggle.classList.add('team__wrapper');
+}

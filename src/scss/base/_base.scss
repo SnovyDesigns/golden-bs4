@@ -98,7 +98,7 @@ img {
 }
 
 // Setting up focus styles
-a:focus {
+a.text-link:focus {
   outline: 2px solid $primary-light;
   outline-offset: 5px;
 }
