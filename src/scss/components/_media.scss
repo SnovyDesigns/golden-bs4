@@ -33,12 +33,20 @@
       margin-left: $space-sm;
     }
 
+    @include respond-below(sm) {
+      margin-right: $space-sm;
+    }
+
     img {
       margin-right: $space-md;
     }
 
     p {
       padding-right: $space-sm;
+
+      @include respond-below(sm) {
+        padding-right: 0;
+      }
     }
   }
 

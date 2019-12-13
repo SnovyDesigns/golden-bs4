@@ -13,7 +13,7 @@ module.exports = {
     main: ['./index.js']
   },
   output: {
-    filename: '[name]-[contenthash]-bundle.js',
+    filename: 'js/[name]-[contenthash]-bundle.js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: ''
   },
@@ -40,7 +40,7 @@ module.exports = {
                 quality: 65
               },
               pngquant: {
-                quality: [0.65, 0.90],
+                quality: [0.65, 0.9],
                 speed: 4
               },
               gifsicle: {

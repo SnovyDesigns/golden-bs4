@@ -34,10 +34,6 @@
   .nav-item {
     padding: 0 1rem;
 
-    @include respond-between(md, lg) {
-      padding: 0 0.75rem;
-    }
-
     &:last-of-type {
       padding-right: 0;
     }
@@ -102,8 +98,9 @@
   .navbar-collapse {
     text-align: center;
 
-    @include respond-below(md) {
+    @include respond-below(lg) {
       background: $dark-65;
+      margin-top: 1rem;
 
       .navbar-nav {
         padding: $space-sm 0;
