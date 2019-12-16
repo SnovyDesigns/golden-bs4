@@ -27,7 +27,7 @@ html(lang="en")
             p.prime=pageData.services.prime
             .row.services__row
               for feature, index in pageData.services.features
-                .col-4
+                .col-4.box
                   .d-flex.justify-content-center.align-items-center.mx-auto.services__icon
                     +svg-services-icons(index+1)
                   h3.heading-tertiary.services__subheading=feature

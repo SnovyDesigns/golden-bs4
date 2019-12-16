@@ -18,11 +18,23 @@
     height: calc(100% - 8rem);
   }
 
-  &__bigtext {
+  .bigtext {
     margin-bottom: 5rem;
   }
 
-  &__heading {
-    margin-bottom: 6rem;
+  .heading-primary {
+    margin-bottom: $space-lg;
+  }
+
+  // Clear stage before animation
+  .navbar-brand,
+  .nav-link,
+  .heading-primary,
+  .bigtext,
+  .btn,
+  .menu__btn {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(3rem);
   }
 }

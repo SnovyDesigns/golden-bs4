@@ -1,7 +1,7 @@
 include ./social
 
 mixin worker-card(worker, index, mClass)
-  .worker-card(class=`${mClass}`)
+  .worker-card(class=`${mClass !== undefined ? mClass : ''}`)
     .worker-card__img-box
       img(src=require(`./img/avatar${index+1}.jpg`))
     .worker-card__content
